@@ -41,7 +41,7 @@ npm run preview -- --port 4173 --strictPort
 
 Workflow `.github/workflows/pages.yml` запускается после push в `main`: `npm ci`, сборка, браузерные проверки и затем deploy. Сторонние Actions закреплены на проверенных SHA.
 
-В настройках этого репозитория **Settings → Pages → Source: GitHub Actions**. Запланированный адрес — `https://mmular449-web.github.io/fencingpskov/`; наличие файла workflow само по себе не доказывает успешную публикацию. Её результат фиксируется в `PROGRESS.md`.
+В настройках этого репозитория **Settings → Pages → Source: GitHub Actions**. Сайт опубликован: https://mmular449-web.github.io/fencingpskov/ . Build и deploy подтверждены успешным run, публичные HTTPS-ответы и 40 файлов проверены; подробности и ограничение прямого браузерного прогона через прокси — в `PROGRESS.md`.
 
 ## Статус материалов
 
