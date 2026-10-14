@@ -1,0 +1,79 @@
+[
+  {
+    "id": "owner-brief",
+    "title": "Задание владельца проекта",
+    "url": null,
+    "status": "owner-provided",
+    "notes": "Название, специализация, сведения о наборе, тренерах, руководстве и тренировочном зале. Актуальность набора, контактов, должности и стажа требует подтверждения руководителем."
+  },
+  {
+    "id": "vk",
+    "title": "Сообщество федерации в VK",
+    "url": "https://vk.ru/fehtovanie_pskov",
+    "status": "blocked",
+    "notes": "Запросы к vk.ru и vk.com блокируются сетевым прокси среды (403). Публикации и права на фотографии не проверены."
+  },
+  {
+    "id": "old-site",
+    "title": "Существующий сайт федерации",
+    "url": "https://fencingpskov.nethouse.ru/",
+    "status": "blocked",
+    "notes": "Доступ блокируется сетевым прокси среды (403)."
+  },
+  {
+    "id": "history",
+    "title": "История федерации",
+    "url": "https://fencingpskov.nethouse.ru/about",
+    "status": "blocked",
+    "notes": "Доступ блокируется сетевым прокси среды (403); исторические даты не перенесены."
+  },
+  {
+    "id": "archive",
+    "title": "Архив новостей и соревнований",
+    "url": "https://fencingpskov.nethouse.ru/articles",
+    "status": "blocked",
+    "notes": "Доступ блокируется сетевым прокси среды (403); новости и результаты не выдуманы."
+  },
+  {
+    "id": "rff-federation",
+    "title": "Карточка федерации на сайте ФФР",
+    "url": "https://www.rusfencing.ru/fed_card.php?ID=607",
+    "status": "blocked",
+    "notes": "Официальный источник указан владельцем; содержимое недоступно из среды (403)."
+  },
+  {
+    "id": "rff-school",
+    "title": "Карточка спортивной школы «Лидер»",
+    "url": "https://www.rusfencing.ru/org_card.php?ID=202546",
+    "status": "blocked",
+    "notes": "Официальный источник указан владельцем; содержимое недоступно из среды (403)."
+  },
+  {
+    "id": "fie-rules",
+    "title": "Международная федерация фехтования: правила",
+    "url": "https://fie.org/fie/documents/rules",
+    "status": "reference",
+    "notes": "Ссылка для проверки правил. Раздел о шпаге содержит общие сведения, не заменяет регламент соревнования."
+  },
+  {
+    "id": "original-art",
+    "title": "Иллюстрации сайта",
+    "url": null,
+    "status": "original",
+    "notes": "Оригинальные SVG: шпага, маска, дорожка. Созданы для проекта; не являются фотографиями спортсменов и не изображают реальных людей."
+  },
+  {
+    "id": "fonts",
+    "title": "Golos Text и Cormorant Garamond",
+    "url": "https://github.com/fontsource/fontsource",
+    "status": "licensed",
+    "notes": "Локальные шрифты из Fontsource, SIL Open Font License 1.1. Тексты лицензий сохранены в public/licenses/."
+  },
+  {
+    "id": "apple",
+    "title": "Apple — визуальный ориентир",
+    "url": "https://www.apple.com/",
+    "status": "blocked",
+    "notes": "Доступ блокируется прокси среды (403). Использованы принципы из задания: типографика, свободное пространство и сдержанная палитра. Материалы Apple не копируются."
+  }
+]

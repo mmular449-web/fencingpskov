@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mmular449-web.github.io/fencingpskov/sitemap.xml

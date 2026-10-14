@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img" aria-label="Схема фехтовальной дорожки длиной 14 метров">
+ <defs><linearGradient id="floor" x2="1" y2="1"><stop stop-color="#ecefe7"/><stop offset="1" stop-color="#bac7ba"/></linearGradient><pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0v4" stroke="#46644e" stroke-width=".3" opacity=".3"/></pattern></defs>
+ <path d="M130 195 980 130 1115 335 235 430Z" fill="url(#floor)" stroke="#7e9682" stroke-width="1"/>
+ <path d="M130 195 980 130 1115 335 235 430Z" fill="url(#lines)"/>
+ <path d="m215 188 104 233m148-252 110 225m107-242 117 218m103-235 130 210" stroke="#536f5b" stroke-width="2"/>
+ <path d="m130 195 85-7 104 233-84 9zM895 137l85-7 135 205-81 8z" fill="#7a9280" opacity=".4"/>
+ <path d="m166 123 789-61m-789 50v23m789-86v23" fill="none" stroke="#4d6b55"/>
+ <text x="520" y="61" fill="#3b5a45" font-family="sans-serif" font-size="20" letter-spacing="2">14 МЕТРОВ</text>
+ <circle cx="425" cy="265" r="10" fill="#2a5140"/><circle cx="735" cy="240" r="10" fill="#2a5140"/>
+ <path d="M425 265v220M735 240v215" stroke="#66806d" stroke-dasharray="4 6"/>
+ <g font-family="sans-serif" font-size="15" fill="#304f3c"><text x="342" y="514">Линия начала боя</text><text x="653" y="480">Линия начала боя</text></g>
+</svg>

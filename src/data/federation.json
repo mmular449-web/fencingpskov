@@ -1,0 +1,44 @@
+{
+  "name": "Федерация фехтования Псковской области",
+  "legalName": "Региональная спортивная общественная организация «Федерация фехтования Псковской области»",
+  "president": "Муляр Александр Владимирович",
+  "specialization": "Фехтование на шпагах",
+  "school": "Спортивная школа «Лидер»",
+  "ageRange": "7–14 лет",
+  "trainingAddress": "Псков, улица Кузнецкая, 25",
+  "trainingVenue": "Специализированный зал фехтования на стадионе «Машиностроитель»",
+  "vk": "https://vk.ru/fehtovanie_pskov",
+  "oldWebsite": "https://fencingpskov.nethouse.ru/",
+  "sourceId": "owner-brief",
+  "approvalStatus": "pending",
+  "coaches": [
+    {
+      "name": "Николаева Татьяна Всеволодовна",
+      "displayName": "Татьяна Николаева",
+      "initials": "ТН",
+      "qualifications": [
+        "Мастер спорта СССР по фехтованию на рапирах",
+        "Мастер спорта России по фехтованию на шпагах",
+        "Тренер высшей категории"
+      ],
+      "reportedExperience": "37 лет — по сведениям из задания, дата отсчёта не подтверждена",
+      "phone": "+7 911 358-24-60",
+      "phoneHref": "+79113582460",
+      "photo": null,
+      "sourceId": "owner-brief",
+      "approvalStatus": "pending"
+    },
+    {
+      "name": "Степанов Роман Александрович",
+      "displayName": "Роман Степанов",
+      "initials": "РС",
+      "qualifications": ["Кандидат в мастера спорта по фехтованию на шпагах"],
+      "reportedExperience": "4 года — по сведениям из задания, дата отсчёта не подтверждена",
+      "phone": "+7 911 397-45-68",
+      "phoneHref": "+79113974568",
+      "photo": null,
+      "sourceId": "owner-brief",
+      "approvalStatus": "pending"
+    }
+  ]
+}
