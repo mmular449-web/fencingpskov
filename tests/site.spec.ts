@@ -346,6 +346,9 @@ test("photo scenes animate on touch widths, rail and lightbox work", async ({pag
   await expect(page.locator('.duel-photo')).toHaveCSS('transform', 'none');
   await expect(page.locator('.note-first')).toHaveCSS('opacity', '1');
   await expect(page.locator('.note-second')).toHaveCSS('opacity', '1');
+  const photoBottom = await page.locator('.duel-photo').evaluate(el => el.getBoundingClientRect().bottom);
+  const textTop = await page.locator('.duel-notes').evaluate(el => el.getBoundingClientRect().top);
+  expect(textTop).toBeGreaterThanOrEqual(photoBottom);
   await page.goto('gallery/');
   await page.locator('.gallery-open').first().click();
   await expect(page.locator('#lightbox')).toBeVisible();

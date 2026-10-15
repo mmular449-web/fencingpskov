@@ -2803,3 +2803,22 @@ figure { margin: 0; }
 .hero-media { animation: photo-arrive 1.2s cubic-bezier(.2,.7,.2,1) both; }
 @keyframes photo-arrive { from { opacity: .1; transform: scale(1.045); } to { opacity: 1; transform: none; } }
 @media(prefers-reduced-motion:reduce) { .hero-media { animation: none; } }
+
+/* Reduced motion keeps the photograph and both chapters in normal document flow. */
+@media (prefers-reduced-motion: reduce) {
+ .duel-pin { display: flex; flex-direction: column; min-height: 0; height: auto; }
+ .duel-content { display: contents; }
+ .duel-content > .eyebrow { order: 0; margin: 60px max(56px,calc((100vw - 1200px)/2)) 0; }
+ .duel-content > h2 { order: 1; margin: 28px max(56px,calc((100vw - 1200px)/2)) 45px; max-width: none; }
+ .duel-media { order: 2; position: relative; inset: auto; margin-inline: auto; width: 100%; max-width: 1440px; }
+ .duel-photo { height: auto; max-height: 750px; object-fit: contain; }
+ .duel-media .photo-credit { position: relative; inset: auto; padding: 15px 24px; text-align: right; }
+ .duel-notes { order: 3; position: static; width: calc(100% - 112px); max-width: 1200px; margin: 45px auto 60px; display: grid; grid-template-columns: 1fr 1fr; height: auto; gap: 50px; }
+ .duel-note { position: static; }
+ .duel-note > p:last-child { max-width: 400px; }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+ .duel-content > .eyebrow { margin: 45px 20px 0; }
+ .duel-content > h2 { margin: 24px 20px 35px; }
+ .duel-notes { width: calc(100% - 40px); grid-template-columns: 1fr; gap: 35px; margin-block: 30px 45px; }
+}
