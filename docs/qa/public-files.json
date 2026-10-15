@@ -1,13 +1,13 @@
 {
   "base": "https://mmular449-web.github.io/fencingpskov/",
-  "checkedFiles": 52,
+  "checkedFiles": 50,
   "allMatch": true,
   "files": [
     {
       "path": "index.html",
       "status": 200,
       "matches": true,
-      "sha256": "82def7531f954c64f04a52ba1af93e10691ad37327d1d46a7194641769a5cc58",
+      "sha256": "25396206b2ac1fd8784c19bca95e2e4820a5f032c2a15560c3efe747d164602c",
       "mime": "text/html; charset=utf-8"
     },
     {
@@ -42,43 +42,50 @@
       "path": "news/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "ac01186cf713a400405ea1a17bc2a3aa8fe4b6c923fc4d3c2a04673d9f48fde2",
+      "sha256": "9afb58451ff9e117a732bf8f7693b937be114fcf9902c45555702604f3519d33",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "sources/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "125b54dd7295f21fbbc15e893e5d07e304612437e6d3bed25d66cb593188bee6",
+      "sha256": "f2606fa959989ca718011956690b7d8b8aa1f80bb2e82e8f56c93e907067ce54",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "gallery/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "d50c58d6854abcee6a5e77f3c1dc90bc4f1841952a9244d4c9a1ab9a4d4c1d4c",
+      "sha256": "89f5dc2915d27d7556ac15442b03029a6d331053dcbb0c7c136c0c5b71ce568c",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "coaches/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "7bd0ae25c86e7e69aacfc1d5696169617ed5bb440f799a00cf9d494f7938bec3",
+      "sha256": "3920cce01b3ada6fe3891ff26d7b0042a378cdf554358f098971da7695193779",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "competitions/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "86882f962fb55554f304e53549168b55c4367209df1cac1e15779c7898be2046",
+      "sha256": "e1351926e50d9ae2f4a71c28a7f26412fda1f3ec8a2d4fd5898b35e0500d2309",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "contacts/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "16ba43dce76412c219bac7b0f2fff341c5dc4c4f62d118ae33ed9279de9cf5cc",
+      "sha256": "138f52f112ffba7dbf9fd9641d3b938a2f087827bbdd480b90ea9f651721cf3f",
       "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "licenses/motion-MIT.txt",
+      "status": 200,
+      "matches": true,
+      "sha256": "5d714a6bb72b16fc38928a3124f4c1676414f083aadcb6c2fc63826d1a42a5c2",
+      "mime": "text/plain; charset=utf-8"
     },
     {
       "path": "licenses/golos-text-OFL.txt",
@@ -88,46 +95,32 @@
       "mime": "text/plain; charset=utf-8"
     },
     {
-      "path": "licenses/three-MIT.txt",
-      "status": 200,
-      "matches": true,
-      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
-      "mime": "text/plain; charset=utf-8"
-    },
-    {
       "path": "children/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "797e07d948b0b2f3467e3fb602301f455ed5370020a1ed517b4b13d4f39dc721",
+      "sha256": "b5795321332ce950e8aa06196b8d9e5420acaf19a3465baa1917142a40f8fd28",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "epee/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "695d2ad5145436791ead1564ae7f7f809852a6bd9f43d551aef0e23b3aaacaf0",
+      "sha256": "15259e4f2a13b91d42e6b951e62c3f11f8fdf21df80a644752f36ca96e1ba473",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "documents/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "5ef5cef2385651d2d42f13e4166c19429d24771c0305086bdf4b0a121edbea1b",
+      "sha256": "49b827abc3c12cc4d24f875c611fe91b9758b2cde05225b33c395ea96a9db86c",
       "mime": "text/html; charset=utf-8"
     },
     {
       "path": "federation/index.html",
       "status": 200,
       "matches": true,
-      "sha256": "fa8b637289146c922161e77bb389a91e5413d3f0ea0aef367c490d04434ded59",
+      "sha256": "f207435dbbc068e4219fa07cc6c73373f1f58ba8ccb5a99a5403b8ef93cdb2d6",
       "mime": "text/html; charset=utf-8"
-    },
-    {
-      "path": "assets/viewer-L7EWLUAp.js",
-      "status": 200,
-      "matches": true,
-      "sha256": "a3e9b9c609c55c1be527f06f7ac69c40a9bed26bb16a6f3b6fa8c701459c2be4",
-      "mime": "application/javascript; charset=utf-8"
     },
     {
       "path": "assets/golos-text-cyrillic-600-normal-BgvEFMNR.woff",
@@ -158,10 +151,17 @@
       "mime": "font/woff2"
     },
     {
-      "path": "assets/main-LQKQ3FCD.js",
+      "path": "assets/main-B4Qs9Z3L.css",
       "status": 200,
       "matches": true,
-      "sha256": "19b89714a03dd36da9042a40b53bbf1b165fbfb0b37e585e4efccf23c17be492",
+      "sha256": "3f2c019ef36a3b5a489887cb0e23a376f1e9e07d1ac26233ab1a8300ed6ce651",
+      "mime": "text/css; charset=utf-8"
+    },
+    {
+      "path": "assets/main-B9PVt0Qk.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "deba15a071fcd0cef6a505f64ab834a90b1880899967e0101dfb041fc82bacda",
       "mime": "application/javascript; charset=utf-8"
     },
     {
@@ -207,13 +207,6 @@
       "mime": "font/woff"
     },
     {
-      "path": "assets/main-Ca_F8zfh.css",
-      "status": 200,
-      "matches": true,
-      "sha256": "5aac9821c66307ef78e9d800ab7384ee00dda461243e85fe59c60f68f83067b6",
-      "mime": "text/css; charset=utf-8"
-    },
-    {
       "path": "assets/golos-text-cyrillic-400-normal-BwL4n7Pb.woff",
       "status": 200,
       "matches": true,
@@ -226,13 +219,6 @@
       "matches": true,
       "sha256": "1df9c46f33069094b4769bd2f5f04c5c37e4ce74c77bf062f3bb476d93cc3c2b",
       "mime": "font/woff2"
-    },
-    {
-      "path": "images/epee-poster.webp",
-      "status": 200,
-      "matches": true,
-      "sha256": "df4c5230e4a9a634080d0471382416ee0ab386f4080280b2751e25fdb8fffcd1",
-      "mime": "image/webp"
     },
     {
       "path": "images/social-card.svg",
@@ -368,6 +354,6 @@
       "mime": "image/webp"
     }
   ],
-  "appCommit": "d0112f3b8e94557b8b50c429e8e9119a10e00af3",
-  "checkedAt": "2026-10-15T10:45:53.319158+00:00"
+  "commit": "281b93263024da9ce09ac63d2d1b85ceb5db0062",
+  "checkedAt": "2026-10-15T14:20:23.006871+00:00"
 }

@@ -15,7 +15,7 @@ Three.js, `@types/three`, загрузчик, конфигурация моде�
 
 ## Проверка установщиков и лицензий
 
-До запуска прочитаны README, package manifests, лицензии, исходники CLI `skills@1.7.2`, `motion-ai@14.2.0` и его механизма записи MCP (`add-mcp@2.4.1`). Архивы получены через `npm pack`, установка CLI — с `--ignore-scripts`. Телеметрия skills отключена `DISABLE_TELEMETRY=1 DO_NOT_TRACK=1`; никаких shell-installers из интернета не запускалось. После установки все 21 файла community skill совпали с проверенным исходником по SHA-256.
+До запуска прочитаны README, package manifests, лицензии, исходники CLI `skills@1.7.2`, `motion-ai@14.2.0` и его механизма записи MCP (`add-mcp@2.4.1`). Архивы получены через `npm pack`, установка CLI — с `--ignore-scripts`. Телеметрия skills отключена `DISABLE_TELEMETRY=1 DO_NOT_TRACK=1`; никаких shell-installers из интернета не запускалось. После установки все 21 файла community skill и все 11 файлов официального навыка совпали с проверенными исходниками по SHA-256.
 
 - Motion/runtime-зависимости — MIT; тексты в `public/licenses/motion-MIT.txt`.
 - Community skill — MIT, его `LICENSE` сохранён рядом с навыком.

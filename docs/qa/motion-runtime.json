@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-15T14:17:05.641Z",
+  "note": "Local Chromium emulation with 4x CPU slowdown. Frame samples are diagnostics, not physical iPhone/Safari results.",
+  "results": [
+    {
+      "mode": "native timeline",
+      "viewport": "390x844",
+      "cpuSlowdown": 4,
+      "frames": 355,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.799999999999272,
+      "longTasksMs": [],
+      "overflow": false,
+      "nativeTimelines": 6,
+      "errors": []
+    },
+    {
+      "mode": "JS scroll fallback",
+      "viewport": "390x844",
+      "cpuSlowdown": 4,
+      "frames": 340,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 33.29999999999973,
+      "longTasksMs": [
+        57
+      ],
+      "overflow": false,
+      "nativeTimelines": 0,
+      "errors": []
+    }
+  ]
+}
