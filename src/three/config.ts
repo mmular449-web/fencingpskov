@@ -29,8 +29,8 @@ export const products: Record<ProductKey, ProductConfig> = {
   epee: {
     enabled: false,
     modelPath: null,
-    posterPath: null,
-    posterMediaId: null,
+    posterPath: "images/epee-poster.webp",
+    posterMediaId: "equipment",
     scale: 1,
     position: [0, 0, 0],
     rotation: [0, 0, -0.4],
@@ -44,9 +44,9 @@ export const products: Record<ProductKey, ProductConfig> = {
       exposure: 1,
       background: "#101114",
     },
-    title: "Шпага. Каждая деталь имеет значение.",
+    title: "Шпага. Точность в каждой детали.",
     description:
-      "Клинок, чашеобразная гарда и пистолетная рукоятка. Рассмотрите спортивную шпагу со всех сторон.",
+      "Глубокая чашеобразная гарда защищает кисть. Пистолетная или французская рукоятка помогает управлять клинком. Точность начинается с деталей.",
     theme: "dark",
   },
   mask: {

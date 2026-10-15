@@ -57,6 +57,17 @@ for (const m of media) {
   assert.ok(["image", "video"].includes(m.type));
   https(m.sourceUrl);
   localFile(m.src);
+  if (m.type === "image") {
+    assert.ok(Number.isInteger(m.width) && m.width > 0 && Number.isInteger(m.height) && m.height > 0, "Image dimensions required");
+    assert.ok(Array.isArray(m.variants) && m.variants.length, "Responsive image variants required");
+    for (const variant of m.variants) {
+      localFile(variant.src);
+      assert.ok(Number.isInteger(variant.width) && variant.width > 0, "Valid srcset width required");
+    }
+    https(m.licenseUrl);
+    assert.ok(m.changes?.trim(), "Describe changes for attribution");
+    assert.ok(sourceIds.has(m.sourceId), "Media source must be registered");
+  }
   if (m.type === "video") {
     assert.ok(m.poster, "Video requires a poster");
     localFile(m.poster);

@@ -43,8 +43,14 @@ for (const route of routes) {
     expect(
       await page.locator('link[rel="canonical"]').getAttribute("href"),
     ).toBe(`https://mmular449-web.github.io/fencingpskov/${route}`);
+    // Force each lazy photograph into the viewport, then verify the selected srcset asset.
+    for (const image of await page.locator('img:not(dialog img)').all()) {
+      await image.scrollIntoViewIfNeeded();
+      await expect(image).toHaveJSProperty('complete', true);
+      await expect(image).not.toHaveJSProperty('naturalWidth', 0);
+    }
     const brokenImages = await page
-      .locator("img")
+      .locator("img:not(dialog img)")
       .evaluateAll((images) =>
         images
           .filter(
@@ -228,7 +234,7 @@ test("3D is fully dormant and old equipment illustrations are absent", async ({
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await expect(
       page.locator(
-        "[data-product], canvas, .product-controls, .coach-portrait, .portrait-monogram",
+        "canvas, .product-controls:not([hidden]), .coach-portrait, .portrait-monogram",
       ),
     ).toHaveCount(0);
   }
@@ -318,4 +324,33 @@ test("scroll reveals content and changing reduced motion reveals every section",
         elements.every((el) => getComputedStyle(el).opacity === "1"),
       ),
   ).toBe(true);
+});
+
+
+test("photo scenes animate on touch widths, rail and lightbox work", async ({page}) => {
+  await page.setViewportSize({width: 390, height: 844});
+  await page.goto("");
+  const hero = page.locator('.hero-photo');
+  await expect(hero).toBeVisible();
+  await expect(hero).toHaveJSProperty('complete', true);
+  const scene = page.locator('.duel-scene');
+  await scene.scrollIntoViewIfNeeded();
+  const before = await page.locator('.duel-photo').evaluate(el => getComputedStyle(el).transform);
+  await page.evaluate(() => window.scrollBy({top: 300, behavior: 'instant'}));
+  await expect.poll(() => page.locator('.duel-photo').evaluate(el => getComputedStyle(el).transform)).not.toBe(before);
+  const rail = page.locator('.photo-rail');
+  await rail.scrollIntoViewIfNeeded();
+  await page.getByRole('button', {name: 'Следующая фотография'}).click();
+  await expect(page.locator('.rail-count')).toHaveText('2 / 4');
+  await page.emulateMedia({reducedMotion: 'reduce'});
+  await expect(page.locator('.duel-photo')).toHaveCSS('transform', 'none');
+  await expect(page.locator('.note-first')).toHaveCSS('opacity', '1');
+  await expect(page.locator('.note-second')).toHaveCSS('opacity', '1');
+  await page.goto('gallery/');
+  await page.locator('.gallery-open').first().click();
+  await expect(page.locator('#lightbox')).toBeVisible();
+  await expect(page.locator('#lightbox img')).toHaveJSProperty('complete', true);
+  await expect(page.locator('#lightbox p')).toContainText('CC BY 2.5');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#lightbox')).toBeHidden();
 });

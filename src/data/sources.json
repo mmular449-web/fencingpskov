@@ -81,5 +81,45 @@
     "status": "verified",
     "notes": "Изучена текущая главная Apple: компактная навигация, крупная типографика, центрированные презентационные секции, округлые CTA и контраст светлого и тёмного. Графика и макеты не копируются.",
     "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "photo-precision",
+    "title": "Диего Конфалоньери и Фабиан Каутер. Финал Trophée Monal, Париж, 2012.",
+    "url": "https://commons.wikimedia.org/wiki/File:Final_Trophee_Monal_2012_n08.jpg",
+    "status": "licensed",
+    "checkedAt": "2026-10-15",
+    "notes": "Marie-Lan Nguyen / Wikimedia Commons · CC BY 2.5. Уменьшение, WebP; кадрирование при адаптивном показе. Международный старт, не мероприятие Псковской федерации. Лицензия: https://creativecommons.org/licenses/by/2.5/"
+  },
+  {
+    "id": "photo-duel",
+    "title": "Сюй Аньци и Росселла Фьяминго. Финал женского Кубка мира по шпаге, Сен-Мор, 2014.",
+    "url": "https://commons.wikimedia.org/wiki/File:Final_2014_Challenge_International_de_Saint-Maur_t172036.jpg",
+    "status": "licensed",
+    "checkedAt": "2026-10-15",
+    "notes": "Marie-Lan Nguyen / Wikimedia Commons · CC BY 3.0. Уменьшение, WebP; кадрирование при адаптивном показе. Международный старт, не мероприятие Псковской федерации. Лицензия: https://creativecommons.org/licenses/by/3.0/"
+  },
+  {
+    "id": "photo-equipment",
+    "title": "Контроль оружия на Trophée Monal, 2013. Шпаги с пистолетными и французской рукоятками.",
+    "url": "https://commons.wikimedia.org/wiki/File:Epees_Challenge_RFF_2013_team_t124009.jpg",
+    "status": "licensed",
+    "checkedAt": "2026-10-15",
+    "notes": "Marie-Lan Nguyen / Wikimedia Commons · CC BY 2.5. Уменьшение, WebP; кадрирование при адаптивном показе. Международный старт, не мероприятие Псковской федерации. Лицензия: https://creativecommons.org/licenses/by/2.5/"
+  },
+  {
+    "id": "photo-focus",
+    "title": "Сунь Юйцзе. Кубок мира по шпаге в Сен-Море, 2014.",
+    "url": "https://commons.wikimedia.org/wiki/File:Sun_Yujie_2014_Challenge_International_de_Saint-Maur_t102910.jpg",
+    "status": "licensed",
+    "checkedAt": "2026-10-15",
+    "notes": "Marie-Lan Nguyen / Wikimedia Commons · CC BY 3.0. Уменьшение, WebP; кадрирование при адаптивном показе. Международный старт, не мероприятие Псковской федерации. Лицензия: https://creativecommons.org/licenses/by/3.0/"
+  },
+  {
+    "id": "photo-distance",
+    "title": "Сет Келси и Чон Джин Сон. Бой за бронзу, Лондон, 2012.",
+    "url": "https://commons.wikimedia.org/wiki/File:U.S._Air_Force_Capt._Seth_Kelsey,_left,_competes_in_the_Olympic_men%27s_epee_individual_bronze_medal_fencing_match_against_Jung_Jinsun_from_South_Korea_120801-A-ZZ999-002.jpg",
+    "status": "licensed",
+    "checkedAt": "2026-10-15",
+    "notes": "Tim Hipps / U.S. Army · Public domain (U.S. federal government). Уменьшение, WebP; кадрирование при адаптивном показе. Международный старт, не мероприятие Псковской федерации. Лицензия: https://commons.wikimedia.org/wiki/Template:PD-USGov-Military"
   }
 ]

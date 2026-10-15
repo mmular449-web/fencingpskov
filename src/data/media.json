@@ -1,1 +1,190 @@
-[]
+[
+  {
+    "id": "precision",
+    "type": "image",
+    "src": "images/editorial/precision-2200.webp",
+    "width": 3132,
+    "height": 2081,
+    "variants": [
+      {
+        "src": "images/editorial/precision-640.webp",
+        "width": 640
+      },
+      {
+        "src": "images/editorial/precision-1000.webp",
+        "width": 1000
+      },
+      {
+        "src": "images/editorial/precision-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "images/editorial/precision-2200.webp",
+        "width": 2200
+      }
+    ],
+    "alt": "Укол и контратака в финале Trophée Monal 2012.",
+    "caption": "Диего Конфалоньери и Фабиан Каутер. Финал Trophée Monal, Париж, 2012.",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Final_Trophee_Monal_2012_n08.jpg",
+    "author": "Marie-Lan Nguyen / Wikimedia Commons",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+    "permissionStatus": "approved",
+    "minorsPermission": "not-applicable",
+    "weapon": "epee",
+    "weaponVerification": "В источнике указан мужской Кубок мира по шпаге; визуально видны глубокие чашеобразные гарды, колющие клинки и отсутствие сабельной дужки.",
+    "rightsReference": "https://commons.wikimedia.org/wiki/File:Final_Trophee_Monal_2012_n08.jpg#Licensing",
+    "rightsScope": "Открытая лицензия фотографа; иллюстрация шпажного спорта в контексте указанного взрослого соревнования. Не означает поддержки федерации спортсменами.",
+    "changes": "Уменьшение, WebP; кадрирование при адаптивном показе.",
+    "sourceId": "photo-precision",
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "duel",
+    "type": "image",
+    "src": "images/editorial/duel-2200.webp",
+    "width": 5000,
+    "height": 3337,
+    "variants": [
+      {
+        "src": "images/editorial/duel-640.webp",
+        "width": 640
+      },
+      {
+        "src": "images/editorial/duel-1000.webp",
+        "width": 1000
+      },
+      {
+        "src": "images/editorial/duel-1600.webp",
+        "width": 1600
+      },
+      {
+        "src": "images/editorial/duel-2200.webp",
+        "width": 2200
+      }
+    ],
+    "alt": "Шпажистки Сюй Аньци и Росселла Фьяминго в атаке.",
+    "caption": "Сюй Аньци и Росселла Фьяминго. Финал женского Кубка мира по шпаге, Сен-Мор, 2014.",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Final_2014_Challenge_International_de_Saint-Maur_t172036.jpg",
+    "author": "Marie-Lan Nguyen / Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "permissionStatus": "approved",
+    "minorsPermission": "not-applicable",
+    "weapon": "epee",
+    "weaponVerification": "Описание источника: women's épée World Cup final. На обеих шпагах видны глубокие чашеобразные гарды; отсутствуют проводящие жилеты и сабельные дужки.",
+    "rightsReference": "https://commons.wikimedia.org/wiki/File:Final_2014_Challenge_International_de_Saint-Maur_t172036.jpg#Licensing",
+    "rightsScope": "Открытая лицензия фотографа; иллюстрация шпажного спорта в контексте указанного взрослого соревнования. Не означает поддержки федерации спортсменами.",
+    "changes": "Уменьшение, WebP; кадрирование при адаптивном показе.",
+    "sourceId": "photo-duel",
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "equipment",
+    "type": "image",
+    "src": "images/epee-poster.webp",
+    "width": 3000,
+    "height": 1992,
+    "variants": [
+      {
+        "src": "images/editorial/equipment-640.webp",
+        "width": 640
+      },
+      {
+        "src": "images/editorial/equipment-1000.webp",
+        "width": 1000
+      },
+      {
+        "src": "images/editorial/equipment-1600.webp",
+        "width": 1600
+      }
+    ],
+    "alt": "Реальные спортивные шпаги после контроля оружия: чашеобразные гарды и рукоятки.",
+    "caption": "Контроль оружия на Trophée Monal, 2013. Шпаги с пистолетными и французской рукоятками.",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Epees_Challenge_RFF_2013_team_t124009.jpg",
+    "author": "Marie-Lan Nguyen / Wikimedia Commons",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5/",
+    "permissionStatus": "approved",
+    "minorsPermission": "not-applicable",
+    "weapon": "epee",
+    "weaponVerification": "Источник прямо указывает epees, men's épée FIE World Cup; крупно видны чашеобразные гарды, розетки, пистолетные и французская рукоятки.",
+    "rightsReference": "https://commons.wikimedia.org/wiki/File:Epees_Challenge_RFF_2013_team_t124009.jpg#Licensing",
+    "rightsScope": "Открытая лицензия фотографа; иллюстрация шпажного спорта в контексте указанного взрослого соревнования. Не означает поддержки федерации спортсменами.",
+    "changes": "Уменьшение, WebP; кадрирование при адаптивном показе.",
+    "sourceId": "photo-equipment",
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "focus",
+    "type": "image",
+    "src": "images/editorial/focus-1400.webp",
+    "width": 3337,
+    "height": 5000,
+    "variants": [
+      {
+        "src": "images/editorial/focus-640.webp",
+        "width": 640
+      },
+      {
+        "src": "images/editorial/focus-1000.webp",
+        "width": 1000
+      },
+      {
+        "src": "images/editorial/focus-1400.webp",
+        "width": 1400
+      }
+    ],
+    "alt": "Шпажистка Сунь Юйцзе держит маску и шпагу перед боем.",
+    "caption": "Сунь Юйцзе. Кубок мира по шпаге в Сен-Море, 2014.",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sun_Yujie_2014_Challenge_International_de_Saint-Maur_t102910.jpg",
+    "author": "Marie-Lan Nguyen / Wikimedia Commons",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "permissionStatus": "approved",
+    "minorsPermission": "not-applicable",
+    "weapon": "epee",
+    "weaponVerification": "Категория и описание источника: женский Кубок мира по шпаге. В кадре крупная чашеобразная гарда, французская рукоятка и маска в руке.",
+    "rightsReference": "https://commons.wikimedia.org/wiki/File:Sun_Yujie_2014_Challenge_International_de_Saint-Maur_t102910.jpg#Licensing",
+    "rightsScope": "Открытая лицензия фотографа; иллюстрация шпажного спорта в контексте указанного взрослого соревнования. Не означает поддержки федерации спортсменами.",
+    "changes": "Уменьшение, WebP; кадрирование при адаптивном показе.",
+    "sourceId": "photo-focus",
+    "checkedAt": "2026-10-15"
+  },
+  {
+    "id": "distance",
+    "type": "image",
+    "src": "images/editorial/distance-1024.webp",
+    "width": 1024,
+    "height": 682,
+    "variants": [
+      {
+        "src": "images/editorial/distance-640.webp",
+        "width": 640
+      },
+      {
+        "src": "images/editorial/distance-1000.webp",
+        "width": 1000
+      },
+      {
+        "src": "images/editorial/distance-1024.webp",
+        "width": 1024
+      }
+    ],
+    "alt": "Сет Келси и Чон Джин Сон в шпажном поединке на Олимпиаде 2012.",
+    "caption": "Сет Келси и Чон Джин Сон. Бой за бронзу, Лондон, 2012.",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:U.S._Air_Force_Capt._Seth_Kelsey,_left,_competes_in_the_Olympic_men%27s_epee_individual_bronze_medal_fencing_match_against_Jung_Jinsun_from_South_Korea_120801-A-ZZ999-002.jpg",
+    "author": "Tim Hipps / U.S. Army",
+    "license": "Public domain (U.S. federal government)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-USGov-Military",
+    "permissionStatus": "approved",
+    "minorsPermission": "not-applicable",
+    "weapon": "epee",
+    "weaponVerification": "Описание источника: Olympic men's epee bronze medal match. Визуально различимы глубокие гарды, колющее оружие и отсутствие сабельных дужек.",
+    "rightsReference": "https://commons.wikimedia.org/wiki/File:U.S._Air_Force_Capt._Seth_Kelsey,_left,_competes_in_the_Olympic_men%27s_epee_individual_bronze_medal_fencing_match_against_Jung_Jinsun_from_South_Korea_120801-A-ZZ999-002.jpg#Licensing",
+    "rightsScope": "Открытая лицензия фотографа; иллюстрация шпажного спорта в контексте указанного взрослого соревнования. Не означает поддержки федерации спортсменами.",
+    "changes": "Уменьшение, WebP; кадрирование при адаптивном показе.",
+    "sourceId": "photo-distance",
+    "checkedAt": "2026-10-15"
+  }
+]
