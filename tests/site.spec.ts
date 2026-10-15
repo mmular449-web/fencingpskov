@@ -95,6 +95,44 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1440]) {
         ),
         `horizontal overflow on ${route} at ${width}px`,
       ).toBe(true);
+      await page.evaluate(() => document.fonts.ready);
+      const orphanPunctuation = await page
+        .locator("h1,h2,h3")
+        .evaluateAll((headings) => {
+          const errors: string[] = [];
+          for (const heading of headings) {
+            const walker = document.createTreeWalker(
+              heading,
+              NodeFilter.SHOW_TEXT,
+            );
+            let node: Node | null;
+            while ((node = walker.nextNode())) {
+              const text = node.textContent || "";
+              for (let i = 1; i < text.length; i++) {
+                if (!/[.,!?;:]/.test(text[i]) || /\s/.test(text[i - 1]))
+                  continue;
+                const range = document.createRange();
+                range.setStart(node, i - 1);
+                range.setEnd(node, i);
+                const before = range.getBoundingClientRect();
+                range.setStart(node, i);
+                range.setEnd(node, i + 1);
+                const punctuation = range.getBoundingClientRect();
+                if (
+                  before.width &&
+                  punctuation.width &&
+                  Math.abs(before.y - punctuation.y) > 3
+                )
+                  errors.push(heading.textContent || "");
+              }
+            }
+          }
+          return errors;
+        });
+      expect(
+        orphanPunctuation,
+        `isolated heading punctuation on ${route} at ${width}px`,
+      ).toEqual([]);
     }
   });
 }
