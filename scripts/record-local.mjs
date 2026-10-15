@@ -4,7 +4,7 @@ import { chromium } from '@playwright/test';
 import { spawn } from 'node:child_process';
 import { mkdir, writeFile } from 'node:fs/promises';
 const output=process.env.CAPTURE_OUTPUT||'reports/local-visual';
-const site=process.env.SITE_URL||'http://127.0.0.1:4174/fencingpskov/';
+const site=process.env.SITE_URL||'http://127.0.0.1:4173/fencingpskov/';
 await mkdir(output,{recursive:true});
 const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
 let activeTimer;

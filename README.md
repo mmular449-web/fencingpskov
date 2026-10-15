@@ -54,4 +54,4 @@ Workflow `.github/workflows/pages.yml` после push в `main` устанав�
 
 ## Передача визуального обновления
 
-[Полный отчёт](docs/DELIVERY.md), [desktop-видео](docs/videos/desktop-scroll.webm), [mobile-видео](docs/videos/mobile-scroll.webm), [сравнение первого экрана](docs/screenshots/comparison-mobile.png). Происхождение записей и ограничение скачивания публичного артефакта указаны в отчёте. Локальная запись при наличии Chromium и системного FFmpeg: `node scripts/record-local.mjs`.
+[Полный отчёт](docs/DELIVERY.md), [desktop-видео](docs/videos/desktop-scroll.webm), [mobile-видео](docs/videos/mobile-scroll.webm), [сравнение первого экрана](docs/screenshots/comparison-mobile.png). Происхождение записей и ограничение скачивания публичного артефакта указаны в отчёте. Локальная запись при наличии Chromium и системного FFmpeg: запустите production preview на порту 4173, затем `node scripts/record-local.mjs`. Для другого адреса задайте `SITE_URL`.

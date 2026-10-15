@@ -2,7 +2,7 @@ import { chromium } from '@playwright/test';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import assert from 'node:assert/strict';
-const site = process.env.SITE_URL || 'http://127.0.0.1:4174/fencingpskov/';
+const site = process.env.SITE_URL || 'http://127.0.0.1:4173/fencingpskov/';
 const output = process.env.CAPTURE_OUTPUT || 'reports/visual';
 await mkdir(output, {recursive:true});
 const browser = await chromium.launch({
