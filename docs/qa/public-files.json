@@ -1,0 +1,373 @@
+{
+  "base": "https://mmular449-web.github.io/fencingpskov/",
+  "checkedFiles": 52,
+  "allMatch": true,
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "82def7531f954c64f04a52ba1af93e10691ad37327d1d46a7194641769a5cc58",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "matches": true,
+      "sha256": "34a472c61a6aa45586022f95d21c47b80eb0239d1638f3244adeff205ec57551",
+      "mime": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "404.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "085a2e09fd209ba62367ddf94c48f48628d60d1b86c929a9fe102032351327df",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "favicon.svg",
+      "status": 200,
+      "matches": true,
+      "sha256": "a53e24dcb0c7a5f1f631077321cbc6ba17ced3ebfae9aa9a950adc7e8299f066",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "matches": true,
+      "sha256": "c09a18dd0bd5837c7dfda48bea52e245281274bea563d8c15544ec4e56a581b5",
+      "mime": "application/xml"
+    },
+    {
+      "path": "news/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "ac01186cf713a400405ea1a17bc2a3aa8fe4b6c923fc4d3c2a04673d9f48fde2",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "sources/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "125b54dd7295f21fbbc15e893e5d07e304612437e6d3bed25d66cb593188bee6",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "gallery/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "d50c58d6854abcee6a5e77f3c1dc90bc4f1841952a9244d4c9a1ab9a4d4c1d4c",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "coaches/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "7bd0ae25c86e7e69aacfc1d5696169617ed5bb440f799a00cf9d494f7938bec3",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "competitions/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "86882f962fb55554f304e53549168b55c4367209df1cac1e15779c7898be2046",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "contacts/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "16ba43dce76412c219bac7b0f2fff341c5dc4c4f62d118ae33ed9279de9cf5cc",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "licenses/golos-text-OFL.txt",
+      "status": 200,
+      "matches": true,
+      "sha256": "54dcae300688bccf111e43c818a6ee2261d10fc8d7eb5b9c9aa2a1e9b03189c9",
+      "mime": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "licenses/three-MIT.txt",
+      "status": 200,
+      "matches": true,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "mime": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "children/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "797e07d948b0b2f3467e3fb602301f455ed5370020a1ed517b4b13d4f39dc721",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "epee/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "695d2ad5145436791ead1564ae7f7f809852a6bd9f43d551aef0e23b3aaacaf0",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "documents/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "5ef5cef2385651d2d42f13e4166c19429d24771c0305086bdf4b0a121edbea1b",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "federation/index.html",
+      "status": 200,
+      "matches": true,
+      "sha256": "fa8b637289146c922161e77bb389a91e5413d3f0ea0aef367c490d04434ded59",
+      "mime": "text/html; charset=utf-8"
+    },
+    {
+      "path": "assets/viewer-L7EWLUAp.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "a3e9b9c609c55c1be527f06f7ac69c40a9bed26bb16a6f3b6fa8c701459c2be4",
+      "mime": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "assets/golos-text-cyrillic-600-normal-BgvEFMNR.woff",
+      "status": 200,
+      "matches": true,
+      "sha256": "076a846743e348fc8e765d442b82a0983f9cd0559beb44321f7b7dc9b2eccb33",
+      "mime": "font/woff"
+    },
+    {
+      "path": "assets/golos-text-latin-400-normal-Coi1FYaD.woff2",
+      "status": 200,
+      "matches": true,
+      "sha256": "c8246f55dbddb17ceab94b8de2dbcf326dc189f3bc5a8c13d7b14ad05d7d1d81",
+      "mime": "font/woff2"
+    },
+    {
+      "path": "assets/golos-text-latin-500-normal-BQo4s7Kn.woff",
+      "status": 200,
+      "matches": true,
+      "sha256": "9e6be0e6b2d1a6d91d58f5dc270ad5754eb005be935d051cd369527e99a8b630",
+      "mime": "font/woff"
+    },
+    {
+      "path": "assets/golos-text-latin-600-normal-Bhk8uV1U.woff2",
+      "status": 200,
+      "matches": true,
+      "sha256": "ecd56e7dae8376b32caffd25e5c5e1b37cc400ee6d4d838383cff9454d4e9a48",
+      "mime": "font/woff2"
+    },
+    {
+      "path": "assets/main-LQKQ3FCD.js",
+      "status": 200,
+      "matches": true,
+      "sha256": "19b89714a03dd36da9042a40b53bbf1b165fbfb0b37e585e4efccf23c17be492",
+      "mime": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "assets/golos-text-cyrillic-500-normal-BSLQUuP1.woff2",
+      "status": 200,
+      "matches": true,
+      "sha256": "22337b726df83521c7f6b2709e4717116eb53106c6140b45d751f36910191ecc",
+      "mime": "font/woff2"
+    },
+    {
+      "path": "assets/golos-text-latin-400-normal-DOuJOmdK.woff",
+      "status": 200,
+      "matches": true,
+      "sha256": "3a75792e70560c0f8319226ad4ad0a4146eb17b5bfbc5fae9987af3056094939",
+      "mime": "font/woff"
+    },
+    {
+      "path": "assets/golos-text-cyrillic-500-normal-hXinzVVQ.woff",
+      "status": 200,
+      "matches": true,
+      "sha256": "95aa1eb11d0443a1d5e9419d2b8c1001cd19781b15bf3e505d687743e415a563",
+      "mime": "font/woff"
+    },
+    {
+      "path": "assets/golos-text-latin-500-normal-BznAvurO.woff2",
+      "status": 200,
+      "matches": true,
+      "sha256": "779e46588bc6f5f18918dcdf87d609a8053e1c925abd9e94d2b46b0254f36b24",
+      "mime": "font/woff2"
+    },
+    {
+      "path": "assets/golos-text-cyrillic-400-normal-C7us6pn1.woff2",
+      "status": 200,
+      "matches": true,
+      "sha256": "15a5cbadfc1aa7a541651600b757bf7b67bce4e145b3239de072db5427889605",
+      "mime": "font/woff2"
+    },
+    {
+      "path": "assets/golos-text-latin-600-normal-B_o32mE8.woff",
+      "status": 200,
+      "matches": true,
+      "sha256": "2f86716d99730c92efaae322bc19b228c0894ee32723e9fa2608a4903d95bdd7",
+      "mime": "font/woff"
+    },
+    {
+      "path": "assets/main-Ca_F8zfh.css",
+      "status": 200,
+      "matches": true,
+      "sha256": "5aac9821c66307ef78e9d800ab7384ee00dda461243e85fe59c60f68f83067b6",
+      "mime": "text/css; charset=utf-8"
+    },
+    {
+      "path": "assets/golos-text-cyrillic-400-normal-BwL4n7Pb.woff",
+      "status": 200,
+      "matches": true,
+      "sha256": "84eac74e73dfa32e28ada5ad9c0f7d15708e6bfd020d8877d5c73095c3f090ac",
+      "mime": "font/woff"
+    },
+    {
+      "path": "assets/golos-text-cyrillic-600-normal-lpQ9rVRR.woff2",
+      "status": 200,
+      "matches": true,
+      "sha256": "1df9c46f33069094b4769bd2f5f04c5c37e4ce74c77bf062f3bb476d93cc3c2b",
+      "mime": "font/woff2"
+    },
+    {
+      "path": "images/epee-poster.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "df4c5230e4a9a634080d0471382416ee0ab386f4080280b2751e25fdb8fffcd1",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/social-card.svg",
+      "status": 200,
+      "matches": true,
+      "sha256": "cf14610bc2b3b6e9e4de8a2e57abb31ce74b544a715b145cfaca25cad44aea19",
+      "mime": "image/svg+xml"
+    },
+    {
+      "path": "images/social-card.png",
+      "status": 200,
+      "matches": true,
+      "sha256": "b4ca81aa1db5e62cc5c1ff21cb841c3e1af402c6918f7fb8e0a7ff54f2628e81",
+      "mime": "image/png"
+    },
+    {
+      "path": "images/editorial/precision-1000.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "47c94b71c72dfaa35f31abf61615806ce145d56acc6b68e8eb2d1ff3dea176f5",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/equipment-1600.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "df4c5230e4a9a634080d0471382416ee0ab386f4080280b2751e25fdb8fffcd1",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/duel-1600.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "d73f586e4e4a1140d4de13eefd6ebc1292cc5947e1e1244035cbd24a51dc3ae8",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/focus-1000.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "0fadc6a05e84cf7c72623a86a8be1c45290aaf9177c72fab8f91295f697b0ec7",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/focus-1400.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "571c984e6fed715642f234fc453260d1ded188ccc94d4295af6a2f0e5da2e894",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/focus-640.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "53295aa19d0af1da33b795eada72c2b2da907c3d1b52e6da1a11a0c2a1255dff",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/duel-2200.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "f592f6985604297dd1e48ea372955b0767451bd9fb9f04d0a84af0dfbbe08c44",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/equipment-640.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "8b18be5aa638995646764a16f451185e9468acdda418248b57b1093af51473b9",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/duel-1000.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "22a227a1fa58f64244b53476c962b0abec8c6c73286cb7cf0450fb18b9eb1360",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/equipment-1000.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "fa768c23925889e1f8564e0ebaa7e31da702f7505c9d38b92234687064a758c4",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/precision-640.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "ec9e60a1a2b87f97f230bfdefe1469e9023df31108f7f1f247355f79818741b6",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/distance-1024.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "673562f8eb677ed4d42e3541cd5b1f79e3588364a93ba0eed70b6c08d98d5b9c",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/precision-1600.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "a8aac0b9ef4cb0c3eae4052dc99822acf02186f1cb36efa62447747af11113e4",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/duel-640.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "50c63df417619aa301c260a73a2b1dadabcdc315da1cfe6762f25fe379de3fa0",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/distance-1000.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "0442a80631087548627d5acc2820a3bc35adcb6ab200d772d379c833ec09a213",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/precision-2200.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "a554560ba570243195c3580ce1dc4ccae9e0b561bb5c8ea7297144269b02acee",
+      "mime": "image/webp"
+    },
+    {
+      "path": "images/editorial/distance-640.webp",
+      "status": 200,
+      "matches": true,
+      "sha256": "e03f3bdce308f0a2ca50d3ae4c0f7bcf0ce8b257612dfba44376f2f43c2b79d2",
+      "mime": "image/webp"
+    }
+  ],
+  "appCommit": "d0112f3b8e94557b8b50c429e8e9119a10e00af3",
+  "checkedAt": "2026-10-15T10:45:53.319158+00:00"
+}

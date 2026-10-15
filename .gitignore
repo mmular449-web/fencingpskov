@@ -8,3 +8,6 @@ playwright-report/
 !.env.example
 
 reports/*.json
+
+# Temporary local QA output; selected deliverables live in docs/.
+reports/local-visual/
