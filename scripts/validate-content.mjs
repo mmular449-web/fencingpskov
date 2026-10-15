@@ -44,6 +44,16 @@ for (const m of media) {
   );
   for (const key of ["alt", "caption", "author", "license"])
     assert.ok(m[key]?.trim(), `Missing media ${key}`);
+  assert.equal(
+    m.weapon,
+    "epee",
+    "Published photos/videos must be verified epee fencing",
+  );
+  assert.ok(m.weaponVerification?.trim(), "Explain how epee was identified");
+  assert.ok(
+    m.rightsReference?.trim(),
+    "Reference the permission or license record; never publish private consent forms",
+  );
   assert.ok(["image", "video"].includes(m.type));
   https(m.sourceUrl);
   localFile(m.src);

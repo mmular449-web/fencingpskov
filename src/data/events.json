@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "regional-may-2026",
+    "title": "Чемпионат и первенство Псковской области",
+    "date": "2026-05-22",
+    "endDate": "2026-05-23",
+    "location": "Псков",
+    "summary": "Опубликованы результаты соревнований в четырёх категориях. Среди мужчин третье место разделили Роман Степанов и Владислав Зимин.",
+    "sourceUrl": "https://fencingpskov.nethouse.ru/articles/rezultaty-chempionata-i-pervenstva-pskovskoi-oblasti-22-23-maia-"
+  },
+  {
+    "id": "pskov-cup-october-2026",
+    "title": "Кубок города Пскова · архив анонса",
+    "date": "2026-10-03",
+    "endDate": "2026-10-04",
+    "location": "Псков, стадион «Машиностроитель»",
+    "summary": "Даты из опубликованного положения. Это архив анонса; результаты турнира в проверенном источнике не приведены.",
+    "sourceUrl": "https://fencingpskov.nethouse.ru/articles/kubok-goroda-pskova-2026-polozhenie"
+  }
+]

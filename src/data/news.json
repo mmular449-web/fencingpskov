@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "pskov-cup-2026",
+    "title": "Кубок города Пскова. Положение опубликовано.",
+    "date": "2026-09-27",
+    "category": "Соревнования",
+    "summary": "В архиве федерации размещено положение о Кубке города Пскова, анонсированном на 3–4 октября на стадионе «Машиностроитель».",
+    "sourceUrl": "https://fencingpskov.nethouse.ru/articles/kubok-goroda-pskova-2026-polozhenie"
+  },
+  {
+    "id": "summer-camp-2026",
+    "title": "Лето в движении. Сборы на «Голубых озёрах».",
+    "date": "2026-07-29",
+    "category": "Сборы",
+    "summary": "С 18 по 27 июля спортсмены школы «Лидер» тренировались вместе с фехтовальщиками Санкт-Петербурга. В программе — специальная подготовка и восстановление.",
+    "sourceUrl": "https://fencingpskov.nethouse.ru/articles/sbory-leto-2026"
+  },
+  {
+    "id": "regional-championship-2026",
+    "title": "Чемпионат области. Имена победителей.",
+    "date": "2026-05-23",
+    "category": "Соревнования",
+    "summary": "Федерация подвела итоги чемпионата и первенства Псковской области 22–23 мая. Роман Степанов — среди бронзовых призёров мужского турнира.",
+    "sourceUrl": "https://fencingpskov.nethouse.ru/articles/rezultaty-chempionata-i-pervenstva-pskovskoi-oblasti-22-23-maia-"
+  }
+]

@@ -19,6 +19,7 @@ for (const route of routes) {
     page,
     request,
   }) => {
+    await page.emulateMedia({ reducedMotion: "reduce" });
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));
     page.on("console", (m) => {
@@ -73,7 +74,7 @@ for (const route of routes) {
     }
     expect(errors).toEqual([]);
     const accessibility = await new AxeBuilder({ page })
-      .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
+      .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
       .analyze();
     expect(
       accessibility.violations,
@@ -82,7 +83,7 @@ for (const route of routes) {
   });
 }
 
-for (const width of [320, 375, 768, 1024, 1440]) {
+for (const width of [320, 375, 390, 430, 768, 1024, 1440]) {
   test(`responsive layout ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     for (const route of routes) {
@@ -110,7 +111,10 @@ test("mobile menu, Escape and enrollment", async ({ page }) => {
   await page.keyboard.press("Escape");
   await expect(menu).toHaveAttribute("aria-expanded", "false");
   await expect(menu).toBeFocused();
-  await page.getByRole("link", { name: "Записаться на фехтование" }).click();
+  await page
+    .locator(".hero")
+    .getByRole("link", { name: "Начать заниматься" })
+    .click();
   await expect(page).toHaveURL(/contacts\/#enroll$/);
   await expect(page.locator("#enroll")).toBeInViewport();
   await expect(
@@ -146,8 +150,17 @@ test("reduced motion and slow connection", async ({ page, context }) => {
   });
   await page.goto("", { waitUntil: "networkidle" });
   await expect(page.locator(".hero h1")).toBeVisible();
-  await expect(page.locator(".hero-art img")).toBeVisible();
-  expect(await page.locator(".reveal").count()).toBe(0);
+  await expect(page.locator(".hero .button").first()).toBeVisible();
+  expect(
+    await page
+      .locator(".hero h1")
+      .evaluate((el) => getComputedStyle(el).animationName),
+  ).toBe("none");
+  expect(
+    await page
+      .locator(".opening")
+      .evaluate((el) => getComputedStyle(el).opacity),
+  ).toBe("1");
   const resourceBytes = await page.evaluate(() =>
     performance
       .getEntriesByType("resource")
@@ -158,4 +171,113 @@ test("reduced motion and slow connection", async ({ page, context }) => {
       ),
   );
   expect(resourceBytes).toBeLessThan(700000);
+});
+
+test("3D is fully dormant and old equipment illustrations are absent", async ({
+  page,
+}) => {
+  const forbiddenRequests: string[] = [];
+  page.on("request", (request) => {
+    if (
+      /viewer-.*\.js|\.(glb|gltf)(\?|$)|images\/(epee|mask|piste)\.svg/.test(
+        request.url(),
+      )
+    )
+      forbiddenRequests.push(request.url());
+  });
+  for (const route of routes) {
+    await page.goto(route);
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+    await expect(
+      page.locator(
+        "[data-product], canvas, .product-controls, .coach-portrait, .portrait-monogram",
+      ),
+    ).toHaveCount(0);
+  }
+  expect(forbiddenRequests).toEqual([]);
+});
+
+test("news filters show the verified publication category", async ({
+  page,
+}) => {
+  await page.goto("news/");
+  await expect(page.locator(".news-card")).toHaveCount(3);
+  await page.getByRole("button", { name: "Сборы", exact: true }).click();
+  await expect(page.locator(".news-card")).toHaveCount(1);
+  await expect(page.locator(".news-card h3")).toContainText("Голубых озёрах");
+  await expect(
+    page.getByRole("button", { name: "Сборы", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
+  await page.getByRole("button", { name: "Все публикации" }).click();
+  await expect(page.locator(".news-card")).toHaveCount(3);
+});
+
+test("optional viewer preserves fallback when a future model request fails", async ({
+  page,
+}) => {
+  const { readdirSync } = await import("node:fs");
+  const chunk = readdirSync("dist/assets").find((name) =>
+    /^viewer-.*\.js$/.test(name),
+  )!;
+  await page.route("**/models/not-provided.glb", (route) =>
+    route.fulfill({ status: 404, body: "unavailable" }),
+  );
+  await page.goto("");
+  await page.evaluate(async (chunk) => {
+    const root = document.createElement("section");
+    root.id = "viewer-fixture";
+    root.innerHTML =
+      '<p data-static-fallback>Статичное описание</p><div class="product-canvas"></div><div class="product-controls" hidden><button data-viewer-action="rotate"></button><button data-viewer-action="reset"></button><input data-viewer-angle type="range"></div><p class="viewer-status"></p>';
+    document.body.append(root);
+    const { createViewer } = await import(`/fencingpskov/assets/${chunk}`);
+    const instance = createViewer(root, {
+      enabled: true,
+      modelPath: "models/not-provided.glb",
+      scale: 1,
+      position: [0, 0, 0],
+      rotation: [0, 0, 0],
+      cameraPosition: [0, 0, 3],
+      mobileCameraPosition: [0, 0, 4],
+      rotationSpeed: 0.1,
+      lighting: {
+        ambient: 1,
+        key: 3,
+        fill: 2,
+        exposure: 1,
+        background: "#fff",
+      },
+    });
+    (window as any).disposeFixture = instance.dispose;
+  }, chunk);
+  await expect(page.locator("#viewer-fixture")).toHaveAttribute(
+    "data-viewer-state",
+    "fallback",
+  );
+  await expect(
+    page.locator("#viewer-fixture [data-static-fallback]"),
+  ).toBeVisible();
+  await expect(page.locator("#viewer-fixture .product-controls")).toBeHidden();
+  await expect(page.locator("#viewer-fixture canvas")).toHaveCount(0);
+  await page.evaluate(() => {
+    (window as any).disposeFixture();
+    (window as any).disposeFixture();
+  });
+});
+
+test("scroll reveals content and changing reduced motion reveals every section", async ({
+  page,
+}) => {
+  await page.goto("");
+  const coach = page.locator(".coach").first();
+  await coach.scrollIntoViewIfNeeded();
+  await expect(coach).toHaveClass(/is-visible/);
+  await expect(coach).toHaveCSS("opacity", "1");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  expect(
+    await page
+      .locator(".reveal")
+      .evaluateAll((elements) =>
+        elements.every((el) => getComputedStyle(el).opacity === "1"),
+      ),
+  ).toBe(true);
 });
