@@ -217,7 +217,7 @@ test("reduced motion and slow connection", async ({ page, context }) => {
   expect(resourceBytes).toBeLessThan(700000);
 });
 
-test("3D is fully dormant and old equipment illustrations are absent", async ({
+test("only real photo scenes are shipped; no 3D viewer or synthetic equipment assets", async ({
   page,
 }) => {
   const forbiddenRequests: string[] = [];
@@ -234,7 +234,7 @@ test("3D is fully dormant and old equipment illustrations are absent", async ({
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await expect(
       page.locator(
-        "canvas, .product-controls:not([hidden]), .coach-portrait, .portrait-monogram",
+        "canvas, .product-canvas, .product-controls, [data-product], .coach-portrait, .portrait-monogram",
       ),
     ).toHaveCount(0);
   }
@@ -254,58 +254,6 @@ test("news filters show the verified publication category", async ({
   ).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: "Все публикации" }).click();
   await expect(page.locator(".news-card")).toHaveCount(3);
-});
-
-test("optional viewer preserves fallback when a future model request fails", async ({
-  page,
-}) => {
-  const { readdirSync } = await import("node:fs");
-  const chunk = readdirSync("dist/assets").find((name) =>
-    /^viewer-.*\.js$/.test(name),
-  )!;
-  await page.route("**/models/not-provided.glb", (route) =>
-    route.fulfill({ status: 404, body: "unavailable" }),
-  );
-  await page.goto("");
-  await page.evaluate(async (chunk) => {
-    const root = document.createElement("section");
-    root.id = "viewer-fixture";
-    root.innerHTML =
-      '<p data-static-fallback>Статичное описание</p><div class="product-canvas"></div><div class="product-controls" hidden><button data-viewer-action="rotate"></button><button data-viewer-action="reset"></button><input data-viewer-angle type="range"></div><p class="viewer-status"></p>';
-    document.body.append(root);
-    const { createViewer } = await import(`/fencingpskov/assets/${chunk}`);
-    const instance = createViewer(root, {
-      enabled: true,
-      modelPath: "models/not-provided.glb",
-      scale: 1,
-      position: [0, 0, 0],
-      rotation: [0, 0, 0],
-      cameraPosition: [0, 0, 3],
-      mobileCameraPosition: [0, 0, 4],
-      rotationSpeed: 0.1,
-      lighting: {
-        ambient: 1,
-        key: 3,
-        fill: 2,
-        exposure: 1,
-        background: "#fff",
-      },
-    });
-    (window as any).disposeFixture = instance.dispose;
-  }, chunk);
-  await expect(page.locator("#viewer-fixture")).toHaveAttribute(
-    "data-viewer-state",
-    "fallback",
-  );
-  await expect(
-    page.locator("#viewer-fixture [data-static-fallback]"),
-  ).toBeVisible();
-  await expect(page.locator("#viewer-fixture .product-controls")).toBeHidden();
-  await expect(page.locator("#viewer-fixture canvas")).toHaveCount(0);
-  await page.evaluate(() => {
-    (window as any).disposeFixture();
-    (window as any).disposeFixture();
-  });
 });
 
 test("scroll reveals content and changing reduced motion reveals every section", async ({
@@ -352,8 +300,56 @@ test("photo scenes animate on touch widths, rail and lightbox work", async ({pag
   await page.goto('gallery/');
   await page.locator('.gallery-open').first().click();
   await expect(page.locator('#lightbox')).toBeVisible();
-  await expect(page.locator('#lightbox img')).toHaveJSProperty('complete', true);
+  await expect(page.locator('#lightbox .lightbox-image')).toHaveJSProperty('complete', true);
   await expect(page.locator('#lightbox p')).toContainText('CC BY 2.5');
   await page.keyboard.press('Escape');
   await expect(page.locator('#lightbox')).toBeHidden();
+});
+
+
+test("Motion gallery crossfades, arrow keys, swipe and reduced motion", async ({page}) => {
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('gallery/');
+  await page.locator('.gallery-open').first().click();
+  await expect(page.locator('.lightbox-count')).toHaveText('1 / 5');
+  await page.getByRole('button',{name:'Следующий снимок'}).click();
+  await expect(page.locator('.lightbox-count')).toHaveText('2 / 5');
+  await expect(page.locator('.lightbox-transition')).toBeHidden();
+  await page.keyboard.press('ArrowRight');
+  await expect(page.locator('.lightbox-count')).toHaveText('3 / 5');
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.keyboard.press('ArrowLeft');
+  await expect(page.locator('.lightbox-count')).toHaveText('2 / 5');
+  await page.locator('.lightbox-stage').dispatchEvent('pointerdown',{pointerType:'touch',clientX:300,clientY:250});
+  await page.locator('.lightbox-stage').dispatchEvent('pointerup',{pointerType:'touch',clientX:100,clientY:255});
+  await expect(page.locator('.lightbox-count')).toHaveText('3 / 5');
+  await page.keyboard.press('Escape');
+  await expect(page.locator('#lightbox')).toBeHidden();
+  await expect(page.locator('.gallery-open').first()).toBeFocused();
+});
+
+test("Motion scroll has a fallback and can restart after reduced motion and resize", async ({page}) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.addInitScript(()=>{
+    Object.defineProperty(window,'ScrollTimeline',{value:undefined,configurable:true});
+    Object.defineProperty(window,'ViewTimeline',{value:undefined,configurable:true});
+  });
+  await page.setViewportSize({width:375,height:812});
+  await page.goto('');
+  await expect(page.locator('html')).toHaveAttribute('data-motion-engine','motion');
+  const scene = page.locator('.duel-scene');
+  await scene.scrollIntoViewIfNeeded();
+  const before=await page.locator('.duel-photo').evaluate(el=>getComputedStyle(el).transform);
+  await page.evaluate(()=>scrollBy({top:220,behavior:'instant'}));
+  await expect.poll(()=>page.locator('.duel-photo').evaluate(el=>getComputedStyle(el).transform)).not.toBe(before);
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await expect(page.locator('html')).toHaveAttribute('data-motion-state','reduced');
+  await expect(page.locator('.duel-photo')).toHaveCSS('transform','none');
+  await page.emulateMedia({reducedMotion:'no-preference'});
+  await expect(page.locator('html')).toHaveAttribute('data-motion-state','active');
+  await page.setViewportSize({width:430,height:932});
+  await scene.scrollIntoViewIfNeeded();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  expect(errors).toEqual([]);
 });

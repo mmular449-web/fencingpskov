@@ -1,0 +1,7 @@
+[mcp_servers.motion]
+url = "https://mcp.motion.dev"
+startup_timeout_sec = 8
+
+[mcp_servers.motion-plus]
+url = "https://mcp.motion.dev/plus"
+enabled = false

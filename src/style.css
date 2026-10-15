@@ -1456,57 +1456,7 @@ dialog p {
   object-fit: contain;
   transition: opacity 0.7s;
 }
-.product-canvas {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.7s;
-}
-.product-canvas canvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.product-showcase[data-viewer-state="ready"] .product-canvas {
-  opacity: 1;
-}
-.product-showcase[data-viewer-state="ready"] .product-poster {
-  opacity: 0;
-  pointer-events: none;
-}
-.product-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.product-controls[hidden] {
-  display: none;
-}
-.product-controls button {
-  min-height: 48px;
-  background: transparent;
-  border: 1px solid #858791;
-  border-radius: 999px;
-  padding: 12px 20px;
-  color: inherit;
-  font-size: 13px;
-}
-.product-controls button:disabled {
-  opacity: 0.6;
-  cursor: default;
-}
-.product-controls label {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 12px;
-}
-.product-controls input {
-  accent-color: var(--blue);
-  min-height: 44px;
-}
+
 @media (min-width: 1600px) {
   .hero h1 {
     font-size: 128px;
@@ -2420,13 +2370,7 @@ dialog p {
   .product-description {
     font-size: 15px;
   }
-  .product-controls {
-    gap: 12px;
-  }
-  .product-controls button {
-    font-size: 11px;
-    padding-inline: 16px;
-  }
+
 }
 @media (max-width: 370px) {
   .wrap {
@@ -2570,7 +2514,7 @@ figure { margin: 0; }
 .cinema-hero h1 > span { color: #fff; }
 .cinema-hero .hero-description { font-size: 14px; margin-top: 20px; color: #d3d4d8; }
 .hero-media { position: absolute; inset: 130px 0 0; z-index: -3; overflow: hidden; }
-.hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; transform: translate3d(0, var(--hero-shift, 0px), 0) scale(1.03); }
+.hero-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 58%; transform: translate3d(0, 0px, 0) scale(1.03); }
 .hero-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(#030303 0%, #030303ed 12%, #03030345 35%, transparent 53%, #03030340 74%, #030303 100%); }
 .hero-bottom { margin-top: auto; width: 100%; display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
 .cinema-hero .button-group { margin: 0; }
@@ -2586,25 +2530,23 @@ figure { margin: 0; }
 .opening { padding-block: 110px; }
 .opening .display-heading { font-size: clamp(52px, 7vw, 100px); }
 .opening-description { font-size: 20px; }
-.duel-scene { --progress: 0; height: 180svh; background: #08090b; color: #fff; position: relative; }
+.duel-scene { height: 180svh; background: #08090b; color: #fff; position: relative; }
 .duel-pin { position: sticky; top: 63px; height: calc(100svh - 63px); min-height: 650px; isolation: isolate; overflow: hidden; }
 .duel-media { position: absolute; inset: 0; z-index: -3; }
-.duel-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; transform: scale(calc(1.14 - var(--progress) * .14)); }
+.duel-photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; transform: scale(1); }
 .duel-media .photo-credit { position: absolute; bottom: 15px; right: 24px; color: #ccc; z-index: 3; }
 .duel-shade { position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #08090bf5, #08090b95 35%, transparent 75%), linear-gradient(0deg, #08090b, transparent 38%, #08090b30); }
 .duel-content { height: 100%; padding-block: 65px 70px; display: flex; flex-direction: column; }
 .duel-content .eyebrow { color: #cacbd1; }
-.duel-content h2 { margin-top: 25px; font-size: clamp(60px, 7.8vw, 112px); line-height: .95; transform: translate3d(0, calc(var(--progress) * -28px), 0); }
+.duel-content h2 { margin-top: 25px; font-size: clamp(60px, 7.8vw, 112px); line-height: .95; transform: none; }
 .duel-content h2 span { color: #fff; }
 .duel-notes { position: relative; margin-top: auto; width: 335px; height: 170px; }
 .duel-note { position: absolute; inset: 0; }
 .duel-note h3 { font-size: 23px; letter-spacing: -.035em; margin-block: 14px 12px; }
 .duel-note > p:last-child { font-size: 14px; color: #d3d4d8; line-height: 1.6; }
 .duel-note .chapter-number { color: #d3d4d8; font-size: 10px; }
-.note-first { opacity: clamp(0, calc(2.2 - var(--progress) * 4), 1); transform: translate3d(0, calc(var(--progress) * -25px), 0); }
-.note-second { opacity: clamp(0, calc(var(--progress) * 4 - 2.2), 1); transform: translate3d(0, calc(25px - var(--progress) * 25px), 0); }
 .scene-progress { width: 335px; height: 2px; background: #ffffff30; margin-top: 25px; }
-.scene-progress span { display: block; width: 100%; height: 100%; background: #f5f5f7; transform: scaleX(var(--progress)); transform-origin: left; }
+.scene-progress span { display: block; width: 100%; height: 100%; background: #f5f5f7; transform: scaleX(0); transform-origin: left; }
 .media-reveal { overflow: hidden; }
 .media-reveal > img { transition: transform 1.4s cubic-bezier(.2,.7,.2,1), clip-path 1.4s cubic-bezier(.2,.7,.2,1); transform: scale(1.08); clip-path: inset(8% 5%); }
 .media-reveal.photo-visible > img { transform: scale(1); clip-path: inset(0); }
@@ -2676,7 +2618,7 @@ figure { margin: 0; }
   .cinema-hero h1 span { display: block; max-width: 350px; margin-inline: auto; }
   .cinema-hero .hero-description { font-size: 11px; max-width: 240px; margin-top: 16px; line-height: 1.5; }
   .hero-media { inset: 215px -8% 110px; }
-  .hero-photo { object-fit: contain; object-position: 50% 50%; transform: translate3d(0,var(--hero-shift,0px),0) scale(1.04); }
+  .hero-photo { object-fit: contain; object-position: 50% 50%; transform: translate3d(0,0px,0) scale(1.04); }
   .hero-shade { background: linear-gradient(#030303 0%,#030303 23%,transparent 39%,transparent 65%,#030303 85%); }
   .hero-bottom { display: block; }
   .cinema-hero .button-group { flex-direction: row; justify-content: center; gap: 10px; flex-wrap: nowrap; }
@@ -2685,7 +2627,6 @@ figure { margin: 0; }
   .cinema-hero .scroll-link { justify-content: center; margin-top: 16px; min-height: 30px; font-size: 9px; }
   .cinema-hero .hero-edition { display: none; }
   .hero-media .photo-credit { position: absolute; display: block; bottom: -94px; right: 8%; left: 8%; text-align: center; font-size: 7px; line-height: 1.5; }
-
 
   .opening { padding-block: 85px; }
   .opening .display-heading { font-size: clamp(40px,11.5vw,64px); }
@@ -2822,3 +2763,21 @@ figure { margin: 0; }
  .duel-content > h2 { margin: 24px 20px 35px; }
  .duel-notes { width: calc(100% - 40px); grid-template-columns: 1fr; gap: 35px; margin-block: 30px 45px; }
 }
+
+/* Motion timelines own scroll transforms; static CSS remains the fallback. */
+.hero-copy { width: 100%; }
+.motion-ready .hero-enter { animation: none; }
+.motion-ready .reveal, .motion-ready .media-reveal > img { transition: none; }
+@media (prefers-reduced-motion: no-preference) {
+ .motion-ready .duel-note { visibility: visible !important; transition: none; }
+}
+
+#lightbox { width: min(1240px, 96vw); max-height: 96svh; padding: 48px 20px 20px; background: #0b0b0d; color: white; }
+.lightbox-stage { height: min(65svh, 760px); width: 100%; position: relative; touch-action: pan-y pinch-zoom; }
+#lightbox .lightbox-stage img { position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; object-fit: contain; }
+#lightbox .lightbox-transition[hidden] { display: none; }
+.lightbox-navigation { display: flex; justify-content: center; align-items: center; gap: 20px; margin: 18px 0; }
+.lightbox-count { min-width: 40px; text-align: center; font-size: 12px; }
+.lightbox-close { z-index: 2; min-width: 44px; min-height: 44px; color: white; }
+#lightbox .lightbox-caption { font-size: 11px; color: #ddd; line-height: 1.8; }
+@media(max-width:760px) { #lightbox { padding-inline: 12px; } .lightbox-stage { height: 56svh; } }

@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-15",
+  "sources": {
+    "motion": {
+      "url": "https://github.com/motiondivision/motion",
+      "commit": "a1fdaa75a08c74c014bb0b28be2a3f172dc44b37"
+    },
+    "motion-ai": {
+      "url": "https://github.com/motiondivision/ai-kit",
+      "commit": "b7e2c68fb3b159b6c849d4d2c5c7a17b408689fc"
+    },
+    "motion-dev-animations": {
+      "url": "https://github.com/199-biotechnologies/motion-dev-animations-skill",
+      "commit": "3feedfb4dba8adae40fc9a5f9a23e3dda2121205"
+    }
+  },
+  "npmArtifacts": [
+    {
+      "name": "skills",
+      "version": "1.7.2",
+      "integrity": "sha512-j+GzyF/oNahsjjjup6y3lJpFkC1lQjIkf4kAMXICA1hboBqi0fAGXAGoE4x9FRZiP1br/YE9+L3/Tqq6PIAe0A==",
+      "shasum": "a90b923b26b53ee8fe84e005c9463f9fe9a53094"
+    },
+    {
+      "name": "motion-ai",
+      "version": "14.2.0",
+      "integrity": "sha512-GZDbAm87DU27BQKF23uvz1uctHN47T9xrz6cg+4hRdGrRQGF2EQhYPBmiik6fjxMWp9s3kd49u7GPfuBAIzt2g==",
+      "shasum": "7288d501714d66eb945515e62286fb52996cc9b6"
+    }
+  ],
+  "runtime": {
+    "motion": "14.2.0",
+    "license": "MIT",
+    "reactInstalled": false,
+    "threeInstalled": false
+  },
+  "discovery": [
+    {
+      "name": "motion",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "motion-dev-animations",
+      "scope": "repo",
+      "enabled": true
+    }
+  ],
+  "mcp": {
+    "projectConfig": ".codex/config.toml",
+    "formatValidatedByCodex": true,
+    "loadedByCurrentManagedSession": false,
+    "freeEndpoint": "https://mcp.motion.dev",
+    "networkResult": "proxy tunnel 403; draft domain added but not applied",
+    "motionPlusEnabled": false
+  },
+  "discoveryErrors": []
+}

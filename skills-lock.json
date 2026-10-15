@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "motion-dev-animations": {
+      "source": "199-biotechnologies/motion-dev-animations-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "a0b2f1265e17de8b8dd69e968bce02e30898a17ddf3ec13221fea13ee51c8c1a"
+    }
+  }
+}
